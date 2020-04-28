@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 //custom study
 var tasksRouter = require('./study/0.tasks');
+var ES6To10_Restful = require('./study/1.ES6To10_Restful');
+
 
 var app = express();
 
@@ -16,6 +18,10 @@ var app = express();
 global._db_kr_ajis = require("./properties.json")._db_kr_ajis;
 global._db_kr_intra = require("./properties.json")._db_kr_intra;
 global._db_kr_crewing = require("./properties.json")._db_kr_crewing;
+const mssql = require('mssql')
+
+  global.poolPromise  = new mssql.ConnectionPool(global._db_kr_ajis).connect();
+  
 
 //package-lock.json
 //https://hyunjun19.github.io/2018/03/23/package-lock-why-need/
@@ -32,6 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+app.use('/ES6To10_Restful', ES6To10_Restful);
+
 
 app.use('/tasks', tasksRouter);
 

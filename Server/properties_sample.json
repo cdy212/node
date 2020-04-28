@@ -1,0 +1,41 @@
+{
+    "language" : "kr",
+    "email_subfix" : "@.co.kr",
+    "host" : "",
+    "filehost" : "",
+    "port" : "8080",
+     "_db_kr_" : {
+        "user": "",
+        "password": "",
+        "server": "", 
+        "database": "",
+        "connectionTimeout": 300000,
+        "requestTimeout": 300000
+    },
+    "_db_kr_crewing" : {
+        "user": "",
+        "password": "",
+        "server": "", 
+        "database": "crewing",
+        "connectionTimeout": 300000,
+        "requestTimeout": 300000
+    },
+    "_db_kr_intra" : {
+        "user": "",
+        "password": "",
+        "server": "", 
+        "database": "Intra",
+        "connectionTimeout": 300000,
+        "requestTimeout": 300000
+    },
+    
+    "mailing_list_board" : [
+                            {
+                                "name":"All",
+                                "list":[
+                                    "dai.kuwahara@-group.com"
+                                ]                                 
+                            }                            
+                         ]
+                         
+}
